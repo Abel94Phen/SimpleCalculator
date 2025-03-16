@@ -21,6 +21,14 @@ class Calculator {
     }
     return a / b;
   }
+
+  // Modulo
+  modulo(a, b) {
+    if (b === 0) {
+      throw new Error("Cannot perform modulo with zero");
+    }
+    return a % b;
+  }
 }
 
 module.exports = Calculator;
