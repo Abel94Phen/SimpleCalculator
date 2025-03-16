@@ -30,4 +30,14 @@ describe('Calculator', () => {
   test('Division by zero throws error', () => {
     expect(() => calc.divide(10, 0)).toThrow("Cannot divide by zero");
   });
+
+  test('Modulo works correctly', () => {
+    expect(calc.modulo(10, 3)).toBe(1);
+    expect(calc.modulo(15, 4)).toBe(3);
+    expect(calc.modulo(-10, 3)).toBe(-1); // Edge case: negative numbers
+  });
+
+  test('Modulo by zero throws error', () => {
+    expect(() => calc.modulo(10, 0)).toThrow("Cannot perform modulo with zero");
+  });
 });
